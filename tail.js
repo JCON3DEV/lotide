@@ -1,12 +1,5 @@
 // FUNCTION IMPLEMENTATION
-const tail = function(assertEqual){
-  let firstIndex = actual;
-  console.log(firstIndex);
-  return firstIndex
-}
-//Need some help. confused
-
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   const emoji = require('node-emoji');
 
   const x = emoji.get('x');
@@ -23,7 +16,26 @@ const assertEqual = function (actual, expected) {
 //could also use String.fromCodePoint() to make emojis
 // eg; var emoji = String.fromCodePoint(0x1F621)
 
+function tail(newArray) {
+  let tailArray = [];
+
+  tailArray = newArray.slice(1);
+  console.log(tailArray);
+  
+  return tailArray;
+  
+}
+
 // TEST CODE
+
+tail([2, 4, 6, 8]);
+// Test Case: Check the original array
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words); // no need to capture the return value since we are not checking it
+//assertEqual(words.length, 3); // original array should still have 3 elements!
+
+
+
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 assertEqual("Jordan", "Jordan");
