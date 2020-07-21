@@ -1,4 +1,11 @@
 // FUNCTION IMPLEMENTATION
+const tail = function(assertEqual){
+  let firstIndex = actual;
+  console.log(firstIndex);
+  return firstIndex
+}
+//Need some help. confused
+
 const assertEqual = function (actual, expected) {
   const emoji = require('node-emoji');
 
