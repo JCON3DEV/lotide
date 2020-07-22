@@ -1,5 +1,6 @@
 const assertEqual = function (actual, expected) {
-  console.log(expected);//currently this is undefined. needs improving
+  
+  console.log(expected);
   const emoji = require('node-emoji');
 
   const x = emoji.get('x');
@@ -15,22 +16,24 @@ const assertEqual = function (actual, expected) {
 
 const eqArrays = function(array1, array2){
   for(let i = 0; i < array1.length; i++){
-    //Tongxin suggested switching this operator to BANG operator
+    
     if(array1[i] === array2[i]){
-      console.log("matches");
+      //console.log(array1[i], array2[i])
+      //console.log("matches");
       expected = true;
     }
     else {
-      console.log("false");
+      //console.log("false");
       expected = false;
       return false;
     } 
-    return true;
   }
+  
+  return true; 
 }
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3])) // => true
-//eqArrays([1, 2, 3], [3, 2, 1]) // => false
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), expected) // => true
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), expected) // => false
 
-//eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-//eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]),expected) // => true
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), expected) // => false
