@@ -1,6 +1,6 @@
 const assertEqual = function (actual, expected) {
   
-  console.log(expected);
+  //console.log(expected);
   const emoji = require('node-emoji');
 
   const x = emoji.get('x');
