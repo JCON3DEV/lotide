@@ -1,20 +1,20 @@
 const assertArraysEqual = (first, second) => {
-  array1 = first;
-  if(array1 === undefined){
+  let array1 = first;
+  let array2 = second;
+
+  if (array1 === undefined) {
     return true;
-  }  
-  array2 = second;
+  }
 
   for (let i = 0; i < array1.length; i++) {
 
     if (array1[i] === array2[i]) {
       //console.log(array1[i], array2[i])
       //console.log("matches");
-      expected = true;
-    }
-    else {
+      //let expected = true;
+    } else {
       //console.log("false");
-      expected = false;
+      //let expected = false;
       return false;
     }
   }
@@ -22,7 +22,7 @@ const assertArraysEqual = (first, second) => {
   return true;
 };
 
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   //console.log(actual);
   //console.log(expected);
   const emoji = require('node-emoji');
@@ -40,24 +40,24 @@ const assertEqual = function (actual, expected) {
 
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
-const countOnly = function (allItems, itemsToCount) {
+const countOnly = function(allItems, itemsToCount) {
   const results = {};
-  for (const item of allItems){
+  for (const item of allItems) {
     //if the object has truthy value then count in the array
     //if the object key is truthy but is not in the array dont count it
     //if falsy then dont count it
     const name = results[item];
     //console.log(item)
-    if(itemsToCount[item]){
+    if (itemsToCount[item]) {
       //ternary statement If the name key has a value then add 1 to the count
       //if not then ,....
-      results[item] = name ? name + 1 : 1 ;  
+      results[item] = name ? name + 1 : 1;
     }
     
   }
   
-  return results; 
-}
+  return results;
+};
 
 const firstNames = [
   "Karl",
