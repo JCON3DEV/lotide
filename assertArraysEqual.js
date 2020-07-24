@@ -17,6 +17,9 @@ const assertEqual = function (actual, expected) {
 const assertArraysEqual = (first, second)=> {
   array1 = first;
   array2 = second;
+  if (array1 === undefined) {
+    return true;
+  }
   
   for (let i = 0; i < array1.length; i++) {
 

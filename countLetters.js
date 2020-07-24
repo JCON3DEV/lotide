@@ -27,34 +27,28 @@ need to do a count for each of the chars - ternary statement
 .
 */ 
 const countLetters = function(stringSentance){
-  const characterCounter = {};
-  let keyLetter;
+  const results = {};
+  
+  
   for(const char of stringSentance){ // cycles through each index in sentance
-    // TESTING ;
-    //console.log(char);//characters in the string
-    //console.log(characterCounter[char]); // undefined
-    //console.log(stringSentance[char]); // undefined
     
-    if (characterCounter[char] === " "){
-      break;
-    }
-    if (characterCounter[char] = stringSentance[char]) {
+    if (results[char] === stringSentance[char]) {           
       
+      results[char] += 1;
+
     }
-    keyLetter = characterCounter[char];
+    else{
+      results[char] = 1;
+    }
+    //keyLetter = characterCounter[char];
     //stringSentance[char] = character ? character + 1 : 1;
   }
-  for (const letter in stringSentance) {
-    console.log(stringSentance[letter]);
-    if (stringSentance[letter] === keyLetter) {
-      keyLetter = keyLetter + 1;
-    }
-  }
-
-  console.log(characterCounter);
-  return characterCounter;
+  
+  console.log(results);
+  return results;
 };
 
-countLetters("lighthouse house");
+countLetters("lighthousehouse");
 
-// I simply cannot get this to add a freaking number to the bloody object.
+// It is currently showingf the index of the keys and not their count
+// Get help in the morning
