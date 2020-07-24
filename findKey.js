@@ -6,13 +6,13 @@
 
 const assertEqual = function (actual, expected) {
 
-  console.log(expected);
+  //console.log(expected);
   const emoji = require('node-emoji');
 
   const x = emoji.get('x');
   const thumbsup = emoji.get('thumbsup');
 
-  if (assertArraysEqual(actual, expected)) {
+  if (actual === expected) {
     console.log(`${thumbsup} Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`${x} Assertion Failed: ${actual} !== ${expected}`);
@@ -50,4 +50,4 @@ function findKeys(object /*reviews*/,callback /*matchingFunc*/) {
 console.log(findKeys(reviews,matchingFunc));
 
 // ### HOW DO I TEST WITH ASSERT EQUAL FUNCTION ?? ###
-//assertEqual(findKeys(),"noma");
+assertEqual(findKeys(reviews, matchingFunc),"noma");
