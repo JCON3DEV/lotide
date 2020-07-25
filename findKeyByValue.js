@@ -36,4 +36,15 @@ function findKeyByValue(object, value){
   }
 }
 
-console.log(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"));
+
+// function getKeyByValue(object, value) {
+//   return Object.keys(object).find(key => object[key] === value);
+// }
+// function getKeyByValue(object, value) {
+//   return Object.keys(object).find(key => object[key] === value);
+// }
+
+
+// const map = { "first": 1, "second": 2 };
+// console.log(getKeyByValue(map, 2));
+// console.log(getKeyByValue(ratings, x));

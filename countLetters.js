@@ -30,11 +30,12 @@ const countLetters = function(stringSentance){
   const results = {};
   
   
-  for(const char of stringSentance){ // cycles through each index in sentance
-    
-    if (results[char] === stringSentance[char]) {           
+  for(let char of stringSentance){ // cycles through each index in sentance
+  
+    if (results[char]) {           
       
       results[char] += 1;
+      //console.log(results[char]);
 
     }
     else{
@@ -48,7 +49,8 @@ const countLetters = function(stringSentance){
   return results;
 };
 
-countLetters("lighthousehouse");
+countLetters("lighthousehouse"); //Prints; { l: 1, i: 1, g: 1, h: 3, t: 1, o: 2, u: 2, s: 2, e: 2 }
+
 
 // It is currently showingf the index of the keys and not their count
 // Get help in the morning
