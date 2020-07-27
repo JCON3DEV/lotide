@@ -1,20 +1,14 @@
 const assertArraysEqual = (first, second) => {
-  let array1 = first;
-  let array2 = second;
 
-  if (array1 === undefined) {
+  if (first === undefined) {
     return true;
   }
 
-  for (let i = 0; i < array1.length; i++) {
+  for (let i = 0; i < first.length; i++) {
 
-    if (array1[i] === array2[i]) {
-      //console.log(array1[i], array2[i])
-      //console.log("matches");
+    if (first[i] === second[i]) {
       //let expected = true;
     } else {
-      //console.log("false");
-      //let expected = false;
       return false;
     }
   }

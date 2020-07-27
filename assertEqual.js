@@ -1,14 +1,14 @@
 // FUNCTION IMPLEMENTATION
+// this compares the actual and the expected and returnsa a string to xplain the results
 const assertEqual = function (actual, expected) {
   const emoji = require('node-emoji');
-
   const x = emoji.get('x');
   const thumbsup = emoji.get('thumbsup');
 
   if (actual === expected) {
-    console.log(`${thumbsup} Assertion Passed: ${actual} === ${expected}`);
+    return (`${thumbsup} Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`${x} Assertion Failed: ${actual} !== ${expected}`);
+    return (`${x} Assertion Failed: ${actual} !== ${expected}`);
   }
 
 };
@@ -16,10 +16,5 @@ const assertEqual = function (actual, expected) {
 //could also use String.fromCodePoint() to make emojis
 // eg; var emoji = String.fromCodePoint(0x1F621)
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("Jordan", "Jordan");
-assertEqual("Jordan", "Badass");
-assertEqual(16, 12);
-assertEqual(94, "Golf");
+module.exports = assertEqual;
+// not that we are exporting the variable and NOT Calling the function.
