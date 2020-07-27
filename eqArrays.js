@@ -1,18 +1,23 @@
-const assertEqual = function (actual, expected) {
+// const assertEqual = function (actual, expected) {
   
-  //console.log(expected);
-  const emoji = require('node-emoji');
+//   //console.log(expected);
+//   const emoji = require('node-emoji');
 
-  const x = emoji.get('x');
-  const thumbsup = emoji.get('thumbsup');
+//   const x = emoji.get('x');
+//   const thumbsup = emoji.get('thumbsup');
 
-  if (actual === expected) {
-    console.log(`${thumbsup} Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`${x} Assertion Failed: ${actual} !== ${expected}`);
-  }
+//   if (actual === expected) {
+//     console.log(`${thumbsup} Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`${x} Assertion Failed: ${actual} !== ${expected}`);
+//   }
 
-};
+// };
+//const assertEqual = ("assertEqual.js");
+// =================
+/* This function provides a boolean value as to whether 
+the array length is the same or not */
+// =================
 
 const eqArrays = function(array1, array2){
   for(let i = 0; i < array1.length; i++){
@@ -32,8 +37,5 @@ const eqArrays = function(array1, array2){
   return true; 
 }
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), expected) // => true
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), expected) // => false
+module.exports = eqArrays;
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]),expected) // => true
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), expected) // => false
