@@ -1,26 +1,19 @@
+const assertEqual = require("./assertEqual");
+const eqArrays = require("./eqArrays");
+
 /* This function returns a boolean true or false if the arrays 
 are the same length  */
 const assertArraysEqual = (first, second)=> {
-  if (first === undefined) {
-    return true;
+  const result = eqArrays(first, second);
+  //console.assert(result, "result is %s", result);
+  // Example of console.assert 
+  if (result) {
+    console.log("test successful")
+  } else {
+    console.log("test failed, arrays not equal");
   }
-  
-  for (let i = 0; i < first.length; i++) {
+}
 
-    if (first[i] === second[i]) {
-      //console.log(array1[i], array2[i])
-      //console.log("matches");
-      expected = true;
-    }
-    else {
-      //console.log("false");
-      expected = false;
-      return false;
-    }
-  }
-
-  return true;
-};
 
 module.exports = assertArraysEqual;
 
