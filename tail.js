@@ -7,7 +7,7 @@ function tail(newArray) {
   let tailArray = [];
 
   tailArray = newArray.slice(1);
-  console.log(tailArray);
+  //console.log(tailArray);
   
   return tailArray;
   

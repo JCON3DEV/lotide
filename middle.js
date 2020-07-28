@@ -2,7 +2,7 @@
 const middle = function(array){
   let numOfElements = array.length;
   let halfwayIndex = Math.floor(numOfElements / 2);
-  let holdingArray = []
+  let holdingArray = [];
   
   if (numOfElements <= 2) { //for arrays shorter than 2 elements
     return [];//can this be done?
@@ -15,7 +15,7 @@ const middle = function(array){
   else if (numOfElements % 2 === 0){
     holdingArray = holdingArray.concat(array[halfwayIndex - 1]);
     holdingArray = holdingArray.concat(array[halfwayIndex]);
-    return holdingArray
+    return holdingArray;
   }
 
 }
