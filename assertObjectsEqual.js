@@ -18,7 +18,7 @@ const eqObjects = function (object1, object2) {
 
 const assertObjectsEqual = function(object1, object2) {
   // the below line wil allow the inspection of the object;
-  let result = eqObjects(object1,object2);
+  let result = eqObjects(object1, object2);
   const inspect = require('util').inspect;
   console.log(`Example label: ${inspect(object1)}`);
   console.log(`Example label: ${inspect(object2)}`);
