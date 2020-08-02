@@ -1,46 +1,43 @@
-const eqArrays = function (array1, array2) {
-  for (let i = 0; i < array1.length; i++) {
+// const eqArrays = function (array1, array2) {
+//   for (let i = 0; i < array1.length; i++) {
 
-    if (array1[i] === array2[i]) {
-      //console.log(array1[i], array2[i])
-      //console.log("matches");
-      expected = true;
-    }
-    else {
-      //console.log("false");
-      expected = false;
-      return false;
-    }
-  }
+//     if (array1[i] === array2[i]) {
+//       //console.log(array1[i], array2[i])
+//       //console.log("matches");
+//       expected = true;
+//     }
+//     else {
+//       //console.log("false");
+//       expected = false;
+//       return false;
+//     }
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
-const assertArraysEqual = (first, second) => {
-  array1 = first;
-  array2 = second;
+// const assertArraysEqual = (first, second) => {
+//   array1 = first;
+//   array2 = second;
 
-  for (let i = 0; i < array1.length; i++) {
+//   for (let i = 0; i < array1.length; i++) {
 
-    if (array1[i] === array2[i]) {
-      //console.log(array1[i], array2[i])
-      //console.log("matches");
-      expected = true;
-    }
-    else {
-      //console.log("false");
-      expected = false;
-      return false;
-    }
-  }
+//     if (array1[i] === array2[i]) {
+//       //console.log(array1[i], array2[i])
+//       //console.log("matches");
+//       expected = true;
+//     }
+//     else {
+//       //console.log("false");
+//       expected = false;
+//       return false;
+//     }
+//   }
   
-  return true;
-};
+//   return true;
+// };
 
 const without = function(source, itemsToRemove) {
-  //console.log(source);
-  //console.log(itemsToRemove);
-  
   let holdingArray = source.filter(word => !itemsToRemove.includes(word));
   return holdingArray;
   //realised that filter would be easier. Mentor Monica helped me to find 

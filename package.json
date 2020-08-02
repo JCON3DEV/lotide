@@ -20,7 +20,10 @@
     "type": "git",
     "url": "git+https://github.com/JCON3DEV/lotide.git"
   },
-  "author": "Jordan Heasman",
+  "author": {
+     "name": "Jordan Heasman",
+     "email": "jconheasman@gmail.com"
+  }
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JCON3DEV/lotide/issues"

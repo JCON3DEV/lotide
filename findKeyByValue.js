@@ -4,25 +4,25 @@
 // undefined.
 
 
-const assertEqual = function (actual, expected) {
-  const emoji = require('node-emoji');
+// const assertEqual = function (actual, expected) {
+//   const emoji = require('node-emoji');
 
-  const x = emoji.get('x');
-  const thumbsup = emoji.get('thumbsup');
+//   const x = emoji.get('x');
+//   const thumbsup = emoji.get('thumbsup');
 
-  if (actual === expected) {
-    console.log(`${thumbsup} Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`${x} Assertion Failed: ${actual} !== ${expected}`);
-  }
+//   if (actual === expected) {
+//     console.log(`${thumbsup} Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`${x} Assertion Failed: ${actual} !== ${expected}`);
+//   }
 
-};
+// };
 
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama: "The Wire"
-};
+// const bestTVShowsByGenre = {
+//   sci_fi: "The Expanse",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama: "The Wire"
+// };
 
 
 function findKeyByValue(object, value){

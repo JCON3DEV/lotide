@@ -4,21 +4,21 @@
 // return undefined.
 
 
-const assertEqual = function (actual, expected) {
+// const assertEqual = function (actual, expected) {
 
-  //console.log(expected);
-  const emoji = require('node-emoji');
+//   //console.log(expected);
+//   const emoji = require('node-emoji');
 
-  const x = emoji.get('x');
-  const thumbsup = emoji.get('thumbsup');
+//   const x = emoji.get('x');
+//   const thumbsup = emoji.get('thumbsup');
 
-  if (actual === expected) {
-    console.log(`${thumbsup} Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`${x} Assertion Failed: ${actual} !== ${expected}`);
-  }
+//   if (actual === expected) {
+//     console.log(`${thumbsup} Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`${x} Assertion Failed: ${actual} !== ${expected}`);
+//   }
 
-};
+// };
 
 
 const reviews = {
@@ -39,7 +39,7 @@ function matchingFunc (x) {
   // checking the x parameter; { stars: 2 }
   return x.stars === 2; // => "noma"[]
 }
-function findKeys(object /*reviews*/,callback /*matchingFunc*/) {
+function findKey(object /*reviews*/,callback /*matchingFunc*/) {
   for (let key of Object.keys(object)) {
     if (callback(object[key]/*matchingFunc(x)*/)) {      
       return key;
@@ -47,7 +47,7 @@ function findKeys(object /*reviews*/,callback /*matchingFunc*/) {
   }
 };
 
-console.log(findKeys(reviews,matchingFunc));
+// console.log(findKey(reviews,matchingFunc));
 
 // ### HOW DO I TEST WITH ASSERT EQUAL FUNCTION ?? ###
-assertEqual(findKeys(reviews, matchingFunc),"noma");
+// assertEqual(findKey(reviews, matchingFunc),"noma");
